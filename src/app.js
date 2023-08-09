@@ -28,8 +28,8 @@ function search(event) {
   searchCity(cityInput.value);
 }
 
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", search);
+let form = document.querySelector("#search-button");
+form.addEventListener("click", search);
 
 function searchCity(city) {
   let apiKey = "60e9b8e93f7104c20384f8e74ed8be82";
