@@ -2,6 +2,7 @@ h1 {
   color: pink;
 }
 #current-button {
+  padding: 10;
   background-color: black;
 }
 .button-container {
