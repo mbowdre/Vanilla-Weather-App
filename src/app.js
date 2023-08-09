@@ -72,7 +72,10 @@ function showTemperature(response) {
     response.data.weather[0].main;
   document
     .querySelector("#weather-icon")
-    .setAttribute("src", `http://openweathermap.org/img/wn/04d@2x.png`);
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 function currentTemperature(response) {
   console.log(response.data.main.temp);
