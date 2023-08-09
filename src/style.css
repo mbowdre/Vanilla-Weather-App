@@ -30,6 +30,9 @@ li {
   line-height: 1;
   list-style: none;
 }
+a {
+  text-decoration: none;
+}
 .body {
   border: 1px solid rgb(167, 159, 159);
   border-radius: 15px;
