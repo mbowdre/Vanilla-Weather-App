@@ -86,7 +86,7 @@ function currentTemperature(response) {
 function showFahrenheit(event) {
   event.preventDefault();
   let fahrenheitTemperature = (14 * 9) / 5 + 32;
-  alert(fahrenheitTemperature);
+  document.querySelector("#fahrenheit").innerHTML = fahrenheitTemperature;
 }
 let farenheitLink = document.querySelector("#fahrenheit");
 farenheitLink.addEventListener("click", showFahrenheit);
