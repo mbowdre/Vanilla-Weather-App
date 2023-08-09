@@ -37,13 +37,13 @@ function searchCity(city) {
 
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
 }
-function changeFarenheit(event) {
+function changeFahrenheit(event) {
   event.preventDefault();
   let temp = document.querySelector("span.temp");
   temp.innerHTML = `66`;
 }
-let farenheit = document.querySelector("#farenheit");
-farenheit.addEventListener("click", changeFarenheit);
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", changeFahrenheit);
 
 function changeCelcius(event) {
   event.preventDefault();
@@ -83,10 +83,10 @@ function currentTemperature(response) {
   let currentTemp = document.querySelector("span.temp");
   currentTemp.innerHTML = `${temperature}`;
 }
-function showFarenheit(event) {
+function showFahrenheit(event) {
   event.preventDefault();
-  let farenheitTemperature = (14 * 9) / 5 + 32;
-  alert(farenheitTemperature);
+  let fahrenheitTemperature = (14 * 9) / 5 + 32;
+  alert(fahrenheitTemperature);
 }
-let farenheitLink = document.querySelector("#farenheit");
-farenheitLink.addEventListener("click", showFarenheit);
+let farenheitLink = document.querySelector("#fahrenheit");
+farenheitLink.addEventListener("click", showFahrenheit);
