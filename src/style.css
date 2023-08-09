@@ -50,6 +50,9 @@ a {
 #weather-icon {
   margin-right: 0 auto;
 }
+#celcius {
+  color: black;
+}
 .container {
   display: block;
   margin: 0 auto;
