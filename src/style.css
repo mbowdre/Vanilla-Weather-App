@@ -48,7 +48,7 @@ a {
   margin-bottom: 20px;
 }
 #weather-icon {
-  margin-right: 5px;
+  margin-right: 0 auto;
 }
 .container {
   display: block;
@@ -72,7 +72,7 @@ a {
 }
 .temperature {
   position: relative;
-  left: 70px;
+  left: 75px;
   top: -70px;
   margin: 0;
   padding: 0;
