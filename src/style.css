@@ -6,5 +6,5 @@ h1 {
   background-color: black;
 }
 .button-container {
-  display: flex;
+  display: inline;
 }
