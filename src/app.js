@@ -77,20 +77,3 @@ function currentTemperature(response) {
   let currentTemp = document.querySelector("span.temp");
   currentTemp.innerHTML = `${temperature}`;
 }
-
-function showPosition(position) {
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
-  let apiKey = "60e9b8e93f7104c20384f8e74ed8be82";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
-
-  axios.get(apiUrl).then(currentTemperature);
-}
-
-function displayCurrentLocation(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(showPosition);
-}
-
-let currentLocation = document.querySelector("#current");
-currentLocation.addEventListener("click", displayCurrentLocation);
