@@ -47,6 +47,9 @@ li {
   max-width: 600px;
   margin: 30px auto;
 }
+.weather-temperature {
+  margin-bottom: 20px;
+}
 .temp {
   color: rgb(33, 33, 32);
   font-size: 64px;
