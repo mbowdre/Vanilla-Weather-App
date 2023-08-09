@@ -30,11 +30,11 @@ li {
   list-style: none;
 }
 .body {
-  border: solid rgb(167, 159, 159);
+  border: 1px solid rgb(167, 159, 159);
   border-radius: 15px;
   padding: 20px;
   background: rgba(255, 255, 255, 0.4);
-  box-shadow: 5px 5px 5px rgb(165, 163, 163, 0.2);
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.2);
 }
 #current-button {
   padding: 10;
