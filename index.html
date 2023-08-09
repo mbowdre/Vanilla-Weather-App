@@ -16,17 +16,16 @@
     <div class="container">
       <div class="weather">
         <div class="body">
-        <h1>Weather App</h1>
-        <form action="search-form">
-          <div class="row">
-            <div class="col-9">
-              <input
-                type="search"
-                placeholder="Enter a city.."
-                class="form-control search-input"
-              />
-            </div>
-            <div class="button-container">
+          <h1>Weather App</h1>
+          <form action="search-form">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Enter a city.."
+                  class="form-control search-input"
+                />
+              </div>
               <div class="col-3 p-0">
                 <input
                   type="submit"
@@ -35,64 +34,56 @@
                   name=""
                   id="search-button"
                 />
-                <div class="col-6 p-0">
-                  <button
-                    class="btn btn btn-primary w-100"
-                    value="Current"
-                    id="current-button"
+              </div>
+            </div>
+          </form>
+
+          <h2>Austin</h2>
+          <ul>
+            <li id="date">Wednesday 22:00</li>
+            <li id="description">Partly Cloudy</li>
+          </ul>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  alt="Cloudy icon"
+                  class="weather-icon float-left"
+                />
+                <div class="temperature float-left">
+                  <span class="temp"> 19</span>
+                  <span class="degrees">
+                    <a href="#" id="celcius">&degC</a> |<a
+                      href="#"
+                      id="farenheit"
+                      >&degF</a
+                    ></span
                   >
-                    Current
-                  </button>
                 </div>
               </div>
             </div>
-          </div>
-        </form>
-
-        <h2>Austin</h2>
-        <ul>
-          <li id="date">Wednesday 22:00</li>
-          <li id="description">Partly Cloudy</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <div class="clearfix">
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                alt="Cloudy icon"
-                class="weather-icon float-left"
-              />
-              <div class="temperature float-left">
-                <span class="temp"> 19</span>
-                <span class="degrees">
-                  <a href="#" id="celcius">&degC</a> |<a href="#" id="farenheit"
-                    >&degF</a
-                  ></span
-                >
-              </div>
+            <div class="col-6">
+              <ul>
+                <li id="humidity">Humidity: 77%</li>
+                <li id="wind">
+                  Wind: 8 km/h
+                  <h></h>
+                  <h></h>
+                </li>
+              </ul>
             </div>
-          </div>
-          <div class="col-6">
-            <ul>
-              <li id="humidity">Humidity: 77%</li>
-              <li id="wind">
-                Wind: 8 km/h
-                <h></h>
-                <h></h>
-              </li>
-            </ul>
-          </div>
-          <div class="forecast">
-            <div class="col">
+            <div class="forecast">
+              <div class="col">
+                <div class="forecastPreview">
+                  <div class="forecast-day">Wed</div>
+                  <canvas width="38" height="38">
+                    <div class="forecast-temperature-max">19&deg</div>
+                    <div class="forecast-temperature-min">13&deg</div>
+                  </canvas>
+                </div>
+              </div>
               <div class="forecastPreview">
-                <div class="forecast-day">Wed</div>
-                <canvas width="38" height="38">
-                  <div class="forecast-temperature-max">19&deg</div>
-                  <div class="forecast-temperature-min">13&deg</div>
-                </canvas>
-              </div>
-            </div>
-             <div class="forecastPreview">
                 <div class="forecast-day">Thu</div>
                 <canvas width="38" height="38">
                   <div class="forecast-temperature-max">19&deg</div>
