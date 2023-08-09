@@ -4,10 +4,7 @@ body {
 h1 {
   color: pink;
 }
-#current-button {
-  padding: 10;
-  background-color: black;
-}
+
 .button-container {
   display: inline;
 }
@@ -31,4 +28,19 @@ li {
   height: 19px;
   line-height: 1;
   list-style: none;
+}
+.body {
+  border: solid rgb(167, 159, 159);
+  border-radius: 15px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 5px 5px 5px rgb(165, 163, 163);
+}
+#current-button {
+  padding: 10;
+  background-color: black;
+}
+.container {
+  display: block;
+  margin: 0 auto;
 }
