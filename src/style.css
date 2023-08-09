@@ -47,6 +47,9 @@ a {
 #description {
   margin-bottom: 20px;
 }
+#weather-icon {
+  padding: 10px;
+}
 .container {
   display: block;
   margin: 0 auto;
