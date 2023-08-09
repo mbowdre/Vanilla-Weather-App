@@ -47,6 +47,26 @@ li {
   max-width: 600px;
   margin: 30px auto;
 }
+.temp {
+  color: rgb(33, 33, 32);
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+}
+.degrees {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: -35px;
+}
+.temperature {
+  position: relative;
+  left: 70px;
+  top: -70px;
+  margin: 0;
+  padding: 0;
+}
 .footer-link {
   text-align: center;
   text-decoration: none;
