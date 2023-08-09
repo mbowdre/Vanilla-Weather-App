@@ -83,3 +83,10 @@ function currentTemperature(response) {
   let currentTemp = document.querySelector("span.temp");
   currentTemp.innerHTML = `${temperature}`;
 }
+function showFarenheit(event) {
+  event.preventDefault();
+  let farenheitTemperature = (14 * 9) / 5 + 32;
+  alert(farenheitTemperature);
+}
+let farenheitLink = document.querySelector("#farenheit");
+farenheitLink.addEventListener("click", showFarenheit);
