@@ -15,8 +15,8 @@ h2 {
   font-weight: 100;
   line-height: 28px;
   text-align: left;
-  margin: 0;
-  padding: 10px;
+  margin-bottom: 0;
+  padding: 10px 0px;
 }
 ul {
   margin: 0;
@@ -44,6 +44,8 @@ li {
 .container {
   display: block;
   margin: 0 auto;
+  max-width: 600px;
+  margin: 30px auto;
 }
 .footer-link {
   text-align: center;
