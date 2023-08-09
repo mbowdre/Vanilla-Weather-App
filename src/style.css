@@ -41,15 +41,16 @@ li {
   padding: 10;
   background-color: black;
 }
+#description {
+  margin-bottom: 20px;
+}
 .container {
   display: block;
   margin: 0 auto;
   max-width: 600px;
   margin: 30px auto;
 }
-.weather-temperature {
-  margin-bottom: 20px;
-}
+
 .temp {
   color: rgb(33, 33, 32);
   font-size: 64px;
