@@ -70,6 +70,7 @@ function displayForecast() {
                     <span class="forecast-temp-max"> 18&deg </span>
                     | <span class="forecast-temp-min">12&deg</span>
                   </div>
+                  </div>
                 `;
   forecastHTML =
     forecastHTML +
@@ -83,6 +84,7 @@ function displayForecast() {
                   <div class="forecast-temperatures">
                     <span class="forecast-temp-max"> 18&deg </span>
                     | <span class="forecast-temp-min">12&deg</span>
+                  </div>
                   </div>
                 `;
   forecastHTML = forecast + `</div>`;
