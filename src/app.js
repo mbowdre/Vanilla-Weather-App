@@ -80,10 +80,6 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
-function getForecast(coordinates) {
-  console.log(coordinates);
-}
-
 function showTemperature(response) {
   console.log(response.data);
   let city = response.data.name;
@@ -138,8 +134,6 @@ farenheitLink.addEventListener("click", showFahrenheit);
 let celciusTemperature = null;
 
 displayForecast();
-
-getForecast(response.data.coords);
 
 let celciusLink = document.querySelector("#celcius");
 celciusLink.addEventListener("click", showCelcius);
