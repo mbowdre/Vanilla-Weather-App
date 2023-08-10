@@ -88,52 +88,53 @@ function getForecast(coordinates) {
   axios.get(url).then(displayForecast);
 }
 
-function showTemperature(response) {
-  console.log(response.data);
-  let city = response.data.name;
-  let h2 = document.querySelector("h2");
-  h2.innerHTML = `${city}`;
-  celciusTemperature = response.data.main.temp;
-
-  document.querySelector("span.temp").innerHTML = `${Math.round(
-    response.data.main.temp
-  )}`;
-  document.querySelector(
-    "#humidity"
-  ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
-  document.querySelector("#wind").innerHTML = `Wind: ${Math.round(
-    response.data.wind.speed
-  )}km/h`;
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
-  document
-    .querySelector("#weather-icon")
-    .setAttribute(
-      "src",
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-    );
-}
-function currentTemperature(response) {
-  console.log(response.data.main.temp);
-  let temperature = Math.round(response.data.main.temp);
-  let currentTemp = document.querySelector("span.temp");
-  currentTemp.innerHTML = `${temperature}`;
-}
-function showFahrenheit(event) {
-  event.preventDefault();
-  farenheitLink.classList.add("active");
-  celciusLink.classList.remove("active");
-  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
-  document.querySelector("span.temp").innerHTML = Math.round(
-    fahrenheitTemperature
-  );
-}
 function showCelcius(event) {
   event.preventDefault();
   celciusLink.classList.add("active");
   farenheitLink.classList.remove("active");
   document.querySelector("span.temp").innerHTML =
     Math.round(celciusTemperature);
+
+  function showTemperature(response) {
+    console.log(response.data);
+    let city = response.data.name;
+    let h2 = document.querySelector("h2");
+    h2.innerHTML = `${city}`;
+    celciusTemperature = response.data.main.temp;
+
+    document.querySelector("span.temp").innerHTML = `${Math.round(
+      response.data.main.temp
+    )}`;
+    document.querySelector(
+      "#humidity"
+    ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
+    document.querySelector("#wind").innerHTML = `Wind: ${Math.round(
+      response.data.wind.speed
+    )}km/h`;
+    document.querySelector("#description").innerHTML =
+      response.data.weather[0].main;
+    document
+      .querySelector("#weather-icon")
+      .setAttribute(
+        "src",
+        `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      );
+  }
+  function currentTemperature(response) {
+    console.log(response.data.main.temp);
+    let temperature = Math.round(response.data.main.temp);
+    let currentTemp = document.querySelector("span.temp");
+    currentTemp.innerHTML = `${temperature}`;
+  }
+  function showFahrenheit(event) {
+    event.preventDefault();
+    farenheitLink.classList.add("active");
+    celciusLink.classList.remove("active");
+    let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+    document.querySelector("span.temp").innerHTML = Math.round(
+      fahrenheitTemperature
+    );
+  }
 }
 
 getForecast(response.data.coord);
