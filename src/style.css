@@ -91,8 +91,11 @@ a {
   color: rgb(33, 33, 32, 0.8);
 }
 .forecast-temp-min {
-  font-size: 20px;
+  font-size: 14px;
   color: rgb(33, 33, 32, 0.6);
+}
+.forecast-temp-max {
+  font-size: 14px;
 }
 .footer-link {
   text-align: center;
