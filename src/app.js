@@ -132,7 +132,7 @@ function showCelcius(event) {
   event.preventDefault();
   celciusLink.classList.add("active");
   farenheitLink.classList.remove("active");
-  celciusTemperature = ((fahrenheitTemperatureTemperature - 32) * 5) / 9;
+  celciusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
   document.querySelector("span.temp").innerHTML =
     Math.round(celciusTemperature);
 }
