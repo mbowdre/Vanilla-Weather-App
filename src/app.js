@@ -55,7 +55,7 @@ let celcius = document.querySelector("#celcius");
 celcius.addEventListener("click", changeCelcius);
 
 function displayForecast() {
-  let forecastElement = document.querySelector("forecast");
+  let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let forecastDays = ["Thu", "Fri", "Sat"];
   days.forEach(function (day) {
