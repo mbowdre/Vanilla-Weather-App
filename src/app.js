@@ -33,7 +33,7 @@ form.addEventListener("click", search);
 
 function searchCity(city) {
   let apiKey = "60e9b8e93f7104c20384f8e74ed8be82";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial`;
 
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
 }
@@ -54,7 +54,8 @@ function changeCelcius(event) {
 let celcius = document.querySelector("#celcius");
 celcius.addEventListener("click", changeCelcius);
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
@@ -82,6 +83,10 @@ function displayForecast() {
 
 function getForecast(coordinates) {
   console.log(coordinates);
+  let apiKey = "60e9b8e93f7104c20384f8e74ed8be82";
+  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function showTemperature(response) {
