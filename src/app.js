@@ -58,41 +58,7 @@ function displayForecast() {
   let forecastElement = document.querySelector("#weather-forecast");
   let forecastHTML = `<div class="row">`;
   let forecastDays = ["Thu", "Fri", "Sat"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `  <div class="col-2">
-                  <div class="forecast-date">${day}</div>
-                  <img
-                    src="http://openweathermap.org/img/wn/03d@2x.png"
-                    alt=""
-                    width="36"
-                  />
-                  <div class="forecast-temperatures">
-                    <span class="forecast-temp-max"> 18&deg </span>
-                    | <span class="forecast-temp-min">12&deg</span>
-                  </div>
-                  </div>
-                `;
-  });
-  forecastHTML =
-    forecastHTML +
-    `  <div class="col-2">
-                  <div class="forecast-date">Thu</div>
-                  <img
-                    src="http://openweathermap.org/img/wn/03d@2x.png"
-                    alt=""
-                    width="36"
-                  />
-                  <div class="forecast-temperatures">
-                    <span class="forecast-temp-max"> 18&deg </span>
-                    | <span class="forecast-temp-min">12&deg</span>
-                  </div>
-                  </div>
-                `;
-
-  forecastHTML = forecast + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
+ 
 }
 
 function showTemperature(response) {
