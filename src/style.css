@@ -86,10 +86,13 @@ a {
   text-align: center;
   color: rgb(33, 33, 32);
 }
-.forecast-date,
+.forecast-date {
+  font-size: 16px;
+  color: rgb(33, 33, 32, 0.2);
+}
 .forecast-temp-min {
   font-size: 20px;
-  color: rgb(33, 33, 32, 0.4);
+  color: rgb(33, 33, 32, 0.3);
 }
 .footer-link {
   text-align: center;
