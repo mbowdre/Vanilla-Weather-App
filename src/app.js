@@ -139,6 +139,5 @@ farenheitLink.addEventListener("click", showFahrenheit);
 let celciusTemperature = null;
 
 displayForecast();
-searchCity("Austin");
 let celciusLink = document.querySelector("#celcius");
 celciusLink.addEventListener("click", showCelcius);
