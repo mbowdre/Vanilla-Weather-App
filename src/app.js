@@ -55,7 +55,7 @@ let celcius = document.querySelector("#celcius");
 celcius.addEventListener("click", changeCelcius);
 
 function displayForecast(response) {
-  console.log(response.data)
+  console.log(response.data);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
