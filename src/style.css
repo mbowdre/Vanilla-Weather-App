@@ -88,11 +88,11 @@ a {
 }
 .forecast-date {
   font-size: 16px;
-  color: rgb(33, 33, 32, 0.2);
+  color: rgb(33, 33, 32, 0.8);
 }
 .forecast-temp-min {
   font-size: 20px;
-  color: rgb(33, 33, 32, 0.3);
+  color: rgb(33, 33, 32, 0.6);
 }
 .footer-link {
   text-align: center;
