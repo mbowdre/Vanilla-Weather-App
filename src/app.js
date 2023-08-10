@@ -80,6 +80,10 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+}
+
 function showTemperature(response) {
   console.log(response.data);
   let city = response.data.name;
@@ -128,12 +132,13 @@ function showCelcius(event) {
     Math.round(celciusTemperature);
 }
 
+getForecast(response.data.coord);
 let farenheitLink = document.querySelector("#fahrenheit");
 farenheitLink.addEventListener("click", showFahrenheit);
 
 let celciusTemperature = null;
 
 displayForecast();
-
+searchCity("Austin");
 let celciusLink = document.querySelector("#celcius");
 celciusLink.addEventListener("click", showCelcius);
