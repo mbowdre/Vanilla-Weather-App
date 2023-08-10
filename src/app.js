@@ -54,6 +54,45 @@ function changeCelcius(event) {
 let celcius = document.querySelector("#celcius");
 celcius.addEventListener("click", changeCelcius);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+  let forecastHTML = `<div class="row">`;
+  forecastHTML =
+    forecastHTML +
+    `  <div class="weather-forecast" id="weather-forecast">
+              
+                <div class="col-2">
+                  <div class="forecast-date">Thu</div>
+                  <img
+                    src="http://openweathermap.org/img/wn/03d@2x.png"
+                    alt=""
+                    width="36"
+                  />
+                  <div class="forecast-temperatures">
+                    <span class="forecast-temp-max"> 18&deg </span>
+                    | <span class="forecast-temp-min">12&deg</span>
+                  </div>
+                </div>`;
+  forecastHTML =
+    forecastHTML +
+    `  <div class="weather-forecast" id="weather-forecast">
+              
+                <div class="col-2">
+                  <div class="forecast-date">Thu</div>
+                  <img
+                    src="http://openweathermap.org/img/wn/03d@2x.png"
+                    alt=""
+                    width="36"
+                  />
+                  <div class="forecast-temperatures">
+                    <span class="forecast-temp-max"> 18&deg </span>
+                    | <span class="forecast-temp-min">12&deg</span>
+                  </div>
+                </div>`;
+  forecastHTML = forecast + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showTemperature(response) {
   console.log(response.data);
   let city = response.data.name;
@@ -106,6 +145,8 @@ let farenheitLink = document.querySelector("#fahrenheit");
 farenheitLink.addEventListener("click", showFahrenheit);
 
 let celciusTemperature = null;
+
+displayForecast();
 
 let celciusLink = document.querySelector("#celcius");
 celciusLink.addEventListener("click", showCelcius);
