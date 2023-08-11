@@ -57,7 +57,15 @@ function showCelcius(event) {
     Math.round(celciusTemperature);
 }
 
-function showTemperature() {
+function showTemperature(response) {
+  console.log(response.data.name);
+  let city = response.data.name;
+  let h2 = document.querySelector("h2");
+  h2.innerHTML = `${city}`;
+  document.querySelector("span.temp").innerHTML = `${Math.round(
+    response.data.main.temp
+  )}`;
+  celciusTemperature = response.data.main.temp;
   document.querySelector("span.temp").innerHTML = `${Math.round(
     response.data.main.temp
   )}`;
@@ -109,17 +117,6 @@ function changeCelcius(event) {
 }
 let celcius = document.querySelector("#celcius");
 celcius.addEventListener("click", changeCelcius);
-
-function showTemperature(response) {
-  console.log(response.data.name);
-  let city = response.data.name;
-  let h2 = document.querySelector("h2");
-  h2.innerHTML = `${city}`;
-  document.querySelector("span.temp").innerHTML = `${Math.round(
-    response.data.main.temp
-  )}`;
-  celciusTemperature = response.data.main.temp;
-}
 
 function currentTemperature(response) {
   console.log(response.data.main.temp);
