@@ -35,7 +35,7 @@ function displayForecast() {
                   <img
                     src="http://openweathermap.org/img/wn/03d@2x.png"
                     alt=""
-                    width="36"
+                    width="30"
                   />
                   <div class="forecast-temperatures">
                     <span class="forecast-temp-max"> 18&deg </span>
