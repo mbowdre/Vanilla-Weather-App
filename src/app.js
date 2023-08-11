@@ -69,6 +69,7 @@ function showCelcius(event) {
   event.preventDefault();
   celciusLink.classList.add("active");
   farenheitLink.classList.remove("active");
+  let celciusTemperature = fahrenheitTemperature - 32 * (5 / 9);
   document.querySelector("span.temp").innerHTML =
     Math.round(celciusTemperature);
 }
@@ -77,7 +78,6 @@ function showFahrenheit(event) {
   event.preventDefault();
   farenheitLink.classList.add("active");
   celciusLink.classList.remove("active");
-  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
   document.querySelector("span.temp").innerHTML = Math.round(
     fahrenheitTemperature
   );
@@ -97,7 +97,7 @@ function showTemperature(response) {
   document.querySelector("span.temp").innerHTML = `${Math.round(
     response.data.main.temp
   )}`;
-  celciusTemperature = response.data.main.temp;
+  fahrenheitTemperature = response.data.main.temp;
   document.querySelector("span.temp").innerHTML = `${Math.round(
     response.data.main.temp
   )}`;
