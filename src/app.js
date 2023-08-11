@@ -138,7 +138,7 @@ function showTemperature(response) {
   celciusTemperature = response.data.main.temp;
 }
 
-getForecast(response.data.coord);
+// getForecast(response.data.coord);
 let farenheitLink = document.querySelector("#fahrenheit");
 farenheitLink.addEventListener("click", showFahrenheit);
 
