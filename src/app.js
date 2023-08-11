@@ -142,7 +142,7 @@ function showTemperature(response) {
 let farenheitLink = document.querySelector("#fahrenheit");
 farenheitLink.addEventListener("click", showFahrenheit);
 
-let celciusTemperature = null;
+// let celciusTemperature = null;
 
 let celciusLink = document.querySelector("#celcius");
 celciusLink.addEventListener("click", showCelcius);
