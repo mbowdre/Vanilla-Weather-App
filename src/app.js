@@ -85,7 +85,7 @@ function showFahrenheit(event) {
 
 function getForecast(coordinates) {
   let key = "60e9b8e93f7104c20384f8e74ed8be82";
-  let url = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${key}&units=metric`;
+  let url = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${key}&units=imperial`;
   axios.get(url).then(displayForecast);
 }
 
