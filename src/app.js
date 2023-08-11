@@ -166,3 +166,4 @@ farenheitLink.addEventListener("click", showFahrenheit);
 
 let celciusLink = document.querySelector("#celcius");
 celciusLink.addEventListener("click", showCelcius);
+search("New York");
