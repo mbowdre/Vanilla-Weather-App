@@ -38,6 +38,34 @@ function searchCity(city) {
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
 }
 
+function changeFahrenheit(event) {
+  event.preventDefault();
+  let temp = document.querySelector("span.temp");
+  temp.innerHTML = `66`;
+}
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", changeFahrenheit);
+
+function changeCelcius(event) {
+  event.preventDefault();
+  let celTemp = document.querySelector("span.temp");
+  celTemp.innerHTML = `19`;
+}
+let celcius = document.querySelector("#celcius");
+celcius.addEventListener("click", changeCelcius);
+
+function showTemperature(response) {
+  console.log(response.data.name);
+  let city = response.data.name;
+  let h2 = document.querySelector("h2");
+  h2.innerHTML = `${city}`;
+  document.querySelector("span.temp").innerHTML = `${Math.round(
+    response.data.main.temp
+  )}`;
+  celciusTemperature = response.data.main.temp;
+}
+
 function currentTemperature(response) {
   console.log(response.data.main.temp);
   let temperature = Math.round(response.data.main.temp);
@@ -53,23 +81,6 @@ function showFahrenheit(event) {
     fahrenheitTemperature
   );
 }
-
-function changeFahrenheit(event) {
-  event.preventDefault();
-  let temp = document.querySelector("span.temp");
-  temp.innerHTML = `66`;
-}
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", changeFahrenheit);
-
-function changeCelcius(event) {
-  event.preventDefault();
-
-  let celTemp = document.querySelector("span.temp");
-  celTemp.innerHTML = `19`;
-}
-let celcius = document.querySelector("#celcius");
-celcius.addEventListener("click", changeCelcius);
 
 function displayForecast() {
   console.log(response.data.daily);
@@ -128,14 +139,6 @@ function showCelcius(event) {
       "src",
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
-}
-
-function showTemperature(response) {
-  console.log(response.data);
-  let city = response.data.name;
-  let h2 = document.querySelector("h2");
-  h2.innerHTML = `${city}`;
-  celciusTemperature = response.data.main.temp;
 }
 
 // getForecast(response.data.coord);
