@@ -69,7 +69,7 @@ function showCelcius(event) {
   event.preventDefault();
   celciusLink.classList.add("active");
   farenheitLink.classList.remove("active");
-  let celciusTemperature = fahrenheitTemperature - 32 * (5 / 9);
+  let celciusTemperature = (fahrenheitTemperature - 32) * (5 / 9);
   document.querySelector("span.temp").innerHTML =
     Math.round(celciusTemperature);
 }
