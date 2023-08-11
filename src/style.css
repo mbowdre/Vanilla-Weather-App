@@ -48,7 +48,7 @@ a {
   margin-bottom: 20px;
 }
 #weather-icon {
-  margin-right: 0 auto;
+  margin-right: 10px;
 }
 .active {
   color: black;
