@@ -31,7 +31,8 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
-  let forecast = response.data.daily;
+  console.log(response.data);
+  let forecast = response.data;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
 
@@ -165,4 +166,3 @@ farenheitLink.addEventListener("click", showFahrenheit);
 
 let celciusLink = document.querySelector("#celcius");
 celciusLink.addEventListener("click", showCelcius);
-displayForecast();
