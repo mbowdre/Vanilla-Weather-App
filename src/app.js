@@ -57,6 +57,16 @@ function showCelcius(event) {
     Math.round(celciusTemperature);
 }
 
+function showFahrenheit(event) {
+  event.preventDefault();
+  farenheitLink.classList.add("active");
+  celciusLink.classList.remove("active");
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  document.querySelector("span.temp").innerHTML = Math.round(
+    fahrenheitTemperature
+  );
+}
+
 function showTemperature(response) {
   console.log(response.data.name);
   let city = response.data.name;
@@ -124,15 +134,6 @@ function currentTemperature(response) {
   let currentTemp = document.querySelector("span.temp");
   currentTemp.innerHTML = `${temperature}`;
 }
-function showFahrenheit(event) {
-  event.preventDefault();
-  farenheitLink.classList.add("active");
-  celciusLink.classList.remove("active");
-  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
-  document.querySelector("span.temp").innerHTML = Math.round(
-    fahrenheitTemperature
-  );
-}
 
 // function getForecast(coordinates) {
 //   console.log(coordinates);
@@ -149,3 +150,5 @@ farenheitLink.addEventListener("click", showFahrenheit);
 
 let celciusLink = document.querySelector("#celcius");
 celciusLink.addEventListener("click", showCelcius);
+
+displayForecast();
