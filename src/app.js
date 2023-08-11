@@ -23,7 +23,7 @@ let day = days[now.getDay()];
 dates.innerHTML = `${day} ${hours}:${minutes}`;
 
 function displayForecast() {
-  console.log(response.data.daily);
+  console.log(displayForecast);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
